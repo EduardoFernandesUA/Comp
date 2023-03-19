@@ -1,4 +1,4 @@
-// Generated from Hello.g4 by ANTLR 4.12.0
+// Generated from /home/eduardo/Documents/Comp/Bloco2/ex04/PrefixCalculator.g4 by ANTLR 4.9.2
 import org.antlr.v4.runtime.Lexer;
 import org.antlr.v4.runtime.CharStream;
 import org.antlr.v4.runtime.Token;
@@ -8,15 +8,15 @@ import org.antlr.v4.runtime.atn.*;
 import org.antlr.v4.runtime.dfa.DFA;
 import org.antlr.v4.runtime.misc.*;
 
-@SuppressWarnings({"all", "warnings", "unchecked", "unused", "cast", "CheckReturnValue"})
-public class HelloLexer extends Lexer {
-	static { RuntimeMetaData.checkVersion("4.12.0", RuntimeMetaData.VERSION); }
+@SuppressWarnings({"all", "warnings", "unchecked", "unused", "cast"})
+public class SuffixCalculatorLexer extends Lexer {
+	static { RuntimeMetaData.checkVersion("4.9.2", RuntimeMetaData.VERSION); }
 
 	protected static final DFA[] _decisionToDFA;
 	protected static final PredictionContextCache _sharedContextCache =
 		new PredictionContextCache();
 	public static final int
-		T__0=1, T__1=2, ID=3, WS=4;
+		T__0=1, T__1=2, T__2=3, T__3=4, Number=5, NEWLINE=6, WS=7;
 	public static String[] channelNames = {
 		"DEFAULT_TOKEN_CHANNEL", "HIDDEN"
 	};
@@ -27,20 +27,20 @@ public class HelloLexer extends Lexer {
 
 	private static String[] makeRuleNames() {
 		return new String[] {
-			"T__0", "T__1", "ID", "WS"
+			"T__0", "T__1", "T__2", "T__3", "Number", "NEWLINE", "WS"
 		};
 	}
 	public static final String[] ruleNames = makeRuleNames();
 
 	private static String[] makeLiteralNames() {
 		return new String[] {
-			null, "'hello'", "'bye'"
+			null, "'*'", "'/'", "'+'", "'-'"
 		};
 	}
 	private static final String[] _LITERAL_NAMES = makeLiteralNames();
 	private static String[] makeSymbolicNames() {
 		return new String[] {
-			null, null, null, "ID", "WS"
+			null, null, null, null, null, "Number", "NEWLINE", "WS"
 		};
 	}
 	private static final String[] _SYMBOLIC_NAMES = makeSymbolicNames();
@@ -78,13 +78,13 @@ public class HelloLexer extends Lexer {
 	}
 
 
-	public HelloLexer(CharStream input) {
+	public SuffixCalculatorLexer(CharStream input) {
 		super(input);
 		_interp = new LexerATNSimulator(this,_ATN,_decisionToDFA,_sharedContextCache);
 	}
 
 	@Override
-	public String getGrammarFileName() { return "Hello.g4"; }
+	public String getGrammarFileName() { return "PrefixCalculator.g4"; }
 
 	@Override
 	public String[] getRuleNames() { return ruleNames; }
@@ -102,29 +102,21 @@ public class HelloLexer extends Lexer {
 	public ATN getATN() { return _ATN; }
 
 	public static final String _serializedATN =
-		"\u0004\u0000\u0004\u001f\u0006\uffff\uffff\u0002\u0000\u0007\u0000\u0002"+
-		"\u0001\u0007\u0001\u0002\u0002\u0007\u0002\u0002\u0003\u0007\u0003\u0001"+
-		"\u0000\u0001\u0000\u0001\u0000\u0001\u0000\u0001\u0000\u0001\u0000\u0001"+
-		"\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0002\u0004\u0002\u0015"+
-		"\b\u0002\u000b\u0002\f\u0002\u0016\u0001\u0003\u0004\u0003\u001a\b\u0003"+
-		"\u000b\u0003\f\u0003\u001b\u0001\u0003\u0001\u0003\u0000\u0000\u0004\u0001"+
-		"\u0001\u0003\u0002\u0005\u0003\u0007\u0004\u0001\u0000\u0002\u0002\u0000"+
-		"AZaz\u0003\u0000\t\n\r\r   \u0000\u0001\u0001\u0000\u0000\u0000\u0000"+
-		"\u0003\u0001\u0000\u0000\u0000\u0000\u0005\u0001\u0000\u0000\u0000\u0000"+
-		"\u0007\u0001\u0000\u0000\u0000\u0001\t\u0001\u0000\u0000\u0000\u0003\u000f"+
-		"\u0001\u0000\u0000\u0000\u0005\u0014\u0001\u0000\u0000\u0000\u0007\u0019"+
-		"\u0001\u0000\u0000\u0000\t\n\u0005h\u0000\u0000\n\u000b\u0005e\u0000\u0000"+
-		"\u000b\f\u0005l\u0000\u0000\f\r\u0005l\u0000\u0000\r\u000e\u0005o\u0000"+
-		"\u0000\u000e\u0002\u0001\u0000\u0000\u0000\u000f\u0010\u0005b\u0000\u0000"+
-		"\u0010\u0011\u0005y\u0000\u0000\u0011\u0012\u0005e\u0000\u0000\u0012\u0004"+
-		"\u0001\u0000\u0000\u0000\u0013\u0015\u0007\u0000\u0000\u0000\u0014\u0013"+
-		"\u0001\u0000\u0000\u0000\u0015\u0016\u0001\u0000\u0000\u0000\u0016\u0014"+
-		"\u0001\u0000\u0000\u0000\u0016\u0017\u0001\u0000\u0000\u0000\u0017\u0006"+
-		"\u0001\u0000\u0000\u0000\u0018\u001a\u0007\u0001\u0000\u0000\u0019\u0018"+
-		"\u0001\u0000\u0000\u0000\u001a\u001b\u0001\u0000\u0000\u0000\u001b\u0019"+
-		"\u0001\u0000\u0000\u0000\u001b\u001c\u0001\u0000\u0000\u0000\u001c\u001d"+
-		"\u0001\u0000\u0000\u0000\u001d\u001e\u0006\u0003\u0000\u0000\u001e\b\u0001"+
-		"\u0000\u0000\u0000\u0003\u0000\u0016\u001b\u0001\u0006\u0000\u0000";
+		"\3\u608b\ua72a\u8133\ub9ed\u417c\u3be7\u7786\u5964\2\t\62\b\1\4\2\t\2"+
+		"\4\3\t\3\4\4\t\4\4\5\t\5\4\6\t\6\4\7\t\7\4\b\t\b\3\2\3\2\3\3\3\3\3\4\3"+
+		"\4\3\5\3\5\3\6\6\6\33\n\6\r\6\16\6\34\3\6\3\6\6\6!\n\6\r\6\16\6\"\5\6"+
+		"%\n\6\3\7\5\7(\n\7\3\7\3\7\3\b\6\b-\n\b\r\b\16\b.\3\b\3\b\2\2\t\3\3\5"+
+		"\4\7\5\t\6\13\7\r\b\17\t\3\2\4\3\2\62;\4\2\13\13\"\"\2\66\2\3\3\2\2\2"+
+		"\2\5\3\2\2\2\2\7\3\2\2\2\2\t\3\2\2\2\2\13\3\2\2\2\2\r\3\2\2\2\2\17\3\2"+
+		"\2\2\3\21\3\2\2\2\5\23\3\2\2\2\7\25\3\2\2\2\t\27\3\2\2\2\13\32\3\2\2\2"+
+		"\r\'\3\2\2\2\17,\3\2\2\2\21\22\7,\2\2\22\4\3\2\2\2\23\24\7\61\2\2\24\6"+
+		"\3\2\2\2\25\26\7-\2\2\26\b\3\2\2\2\27\30\7/\2\2\30\n\3\2\2\2\31\33\t\2"+
+		"\2\2\32\31\3\2\2\2\33\34\3\2\2\2\34\32\3\2\2\2\34\35\3\2\2\2\35$\3\2\2"+
+		"\2\36 \7\60\2\2\37!\t\2\2\2 \37\3\2\2\2!\"\3\2\2\2\" \3\2\2\2\"#\3\2\2"+
+		"\2#%\3\2\2\2$\36\3\2\2\2$%\3\2\2\2%\f\3\2\2\2&(\7\17\2\2\'&\3\2\2\2\'"+
+		"(\3\2\2\2()\3\2\2\2)*\7\f\2\2*\16\3\2\2\2+-\t\3\2\2,+\3\2\2\2-.\3\2\2"+
+		"\2.,\3\2\2\2./\3\2\2\2/\60\3\2\2\2\60\61\b\b\2\2\61\20\3\2\2\2\b\2\34"+
+		"\"$\'.\3\b\2\2";
 	public static final ATN _ATN =
 		new ATNDeserializer().deserialize(_serializedATN.toCharArray());
 	static {
