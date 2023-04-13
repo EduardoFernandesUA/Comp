@@ -5,12 +5,12 @@ program:
     ;
 
 stat:
-        word* NEWLINE
+        Word* NEWLINE
     ;
 
-word:
+Word:
         [a-z]+
     ;
 
 NEWLINE: '\r'? '\n';
-WS: [ \t]+ -> skip;
+WS: [ \-\t]+ -> skip;
